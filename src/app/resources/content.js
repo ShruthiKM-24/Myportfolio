@@ -34,14 +34,9 @@ const social = [
     link: "https://www.linkedin.com/in/shruthi-km/",
   },
   {
-    name: "X",
-    icon: "x",
-    link: "",
-  },
-  {
-    name: "Email",
-    icon: "email",
-    link: "mailto:shruthi.km2427@gmail.com",
+    name: "Gmail",
+    icon: "gmail",
+    link: "mailto:shruthikm24@gmail.com",
   },
 ];
 
@@ -97,7 +92,7 @@ const about = {
     experiences: [
       {
         company: "Marca Rise",
-        timeframe: "Dec 2025 - May 2026",
+        timeframe: "May 2026 - July 2026",
         role: "Video Presenter | Creative Strategy",
         achievements: [
           <>
@@ -128,57 +123,87 @@ const about = {
   },
   technical: {
     display: true,
-    title: "Technical skills",
+    title: "Technical Skills",
     skills: [
       {
         title: "Microsoft Excel",
-        description: <>Proficiency in data analysis, formula-based calculations, PivotTables, and business modeling.</>,
+        description: <>Basic knowledge of Excel for organizing data and creating simple spreadsheets. Able to use formulas, tables, and charts for academic and business tasks.</>,
         images: [],
       },
       {
         title: "PowerPoint Presentation",
-        description: <>Effective in structuring content, designing visuals, and delivering clear, engaging presentations.</>,
+        description: <>Skilled in creating clear and visually appealing presentations. Able to organize information effectively using slides and graphics.</>,
         images: [],
       },
       {
         title: "Operations Management",
-        description: <>Excellent time management skills with proven ability to handle multiple tasks, prioritize effectively, and deliver quality work within deadlines.</>,
+        description: <>Understanding of basic operations management concepts and processes. Interested in improving efficiency and supporting smooth workflow management.</>,
         images: [],
       },
       {
         title: "Business Communication",
-        description: <>Strong organizational and coordination skills with experience in planning, executing, and monitoring projects to achieve defined goals.</>,
+        description: <>Good verbal and written communication skills in professional settings. Able to communicate ideas clearly and work effectively with others.</>,
         images: [],
       },
       {
         title: "Strategic Planning",
-        description: <>Strong organizational and coordination skills with experience in planning, executing, and monitoring projects to achieve defined goals.</>,
+        description: <>Basic knowledge of planning and goal-setting for projects and activities. Able to identify objectives and organize tasks to achieve them.</>,
         images: [],
       },
       {
         title: "Digital Marketing Basics",
-        description: <>Strong organizational and coordination skills with experience in planning, executing, and monitoring projects to achieve defined goals.</>,
+        description: <>Familiar with basic digital marketing concepts and online platforms. Interested in learning how businesses promote products and services online.</>,
         images: [],
       },
       {
         title: "Social Media Strategy",
-        description: <>Strong organizational and coordination skills with experience in planning, executing, and monitoring projects to achieve defined goals.</>,
+        description: <>Basic understanding of social media platforms and content planning. Able to create simple content ideas to improve audience engagement.</>,
         images: [],
       },
       {
         title: "Report Preparation",
-        description: <>Strong organizational and coordination skills with experience in planning, executing, and monitoring projects to achieve defined goals.</>,
+        description: <>Capable of preparing simple and well-organized reports. Able to collect information and present it in a clear format.</>,
         images: [],
       },
       {
         title: "Presentation Skills",
-        description: <>Strong organizational and coordination skills with experience in planning, executing, and monitoring projects to achieve defined goals.</>,
+        description: <>Comfortable presenting ideas and information to small groups. Able to explain topics clearly and confidently.</>,
         images: [],
       },
       {
         title: "Team Coordination",
-        description: <>Strong organizational and coordination skills with experience in planning, executing, and monitoring projects to achieve defined goals.</>,
+        description: <>Able to work effectively as part of a team and support group activities. Good at cooperating with others to complete tasks and achieve goals.</>,
         images: [],
+      },
+    ],
+  },
+  soft: {
+    display: true,
+    title: "Soft Skills",
+    skills: [
+      {
+        title: "Leadership",
+        description: <>Demonstrated leadership abilities through academic projects, team activities, and event participation. Capable of motivating team members, taking initiative, and contributing to successful outcomes.</>,
+      },
+      {
+        title: "Public Speaking",
+        description: <>Confident in presenting ideas and sharing information with groups and audiences. Able to communicate clearly and engage listeners in professional and academic settings.</>,
+      },
+      {
+        title: "Communication & Teamwork",
+        description: <>Strong interpersonal skills with the ability to collaborate effectively in team environments. Skilled at sharing ideas, listening actively, and working towards common goals.</>,
+      },
+      {
+        title: "Time Management",
+        description: <>Effective at organizing tasks, prioritizing responsibilities, and meeting deadlines. Able to manage multiple activities efficiently while maintaining quality performance.</>,
+      },
+      {
+        title: "Strategic Thinking",
+        description: <>Capable of analyzing situations and identifying practical solutions to achieve objectives. Able to evaluate options and contribute to informed decision-making processes.</>,
+      },
+      {
+        title: "Coordination Skills",
+        description: <>Skilled in organizing tasks, supporting team activities, and ensuring smooth communication. Able to coordinate resources and efforts to help achieve project and organizational goals.</>,
       },
     ],
   },
