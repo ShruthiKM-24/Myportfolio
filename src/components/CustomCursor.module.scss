@@ -1,0 +1,36 @@
+.cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(0, 0); // SVG is already offset or handled
+  transition: transform 0.1s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.hovering {
+    .rogArrow {
+        transform: scale(1.5);
+        filter: drop-shadow(0 0 10px red);
+    }
+    .glow {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: radial-gradient(circle, rgba(255, 0, 0, 0.2) 0%, transparent 70%);
+        border-radius: 50%;
+        z-index: -1;
+    }
+  }
+}
+
+.rogArrow {
+    transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.5));
+}
+
+@media (max-width: 768px) {
+    .cursor {
+        display: none;
+    }
+}

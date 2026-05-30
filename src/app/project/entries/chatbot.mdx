@@ -1,0 +1,184 @@
+---
+title: "𝙵𝚛𝚎𝚣𝚗𝚢 - 𝙰𝙸 𝙲𝚑𝚊𝚝𝚋𝚘𝚝 𝚠𝚒𝚝𝚑 𝙸𝚖𝚊𝚐𝚎 𝙸𝚗𝚙𝚞𝚝 (𝚆𝚎𝚋 & 𝙼𝚘𝚋𝚒𝚕𝚎)"
+publishedAt: "2025-06-01"
+summary: "~Wʜᴇʀᴇ Cᴏɴᴠᴇʀsᴀᴛɪᴏɴs Nᴇᴠᴇʀ Bʀᴇᴀᴋ, & Iᴍᴀɢᴇs Sᴘᴇᴀᴋ Lᴏᴜᴅᴇʀ Tʜᴀɴ Wᴏʀᴅs.×Yᴇs, Fʀᴇɴᴢʏ 1.1 Sᴜᴘᴘᴏʀᴛs Cᴏɴᴛɪɴᴜᴏᴜs Cʜᴀᴛs + Iᴍᴀɢᴇ Iɴᴘᴜᴛ.®Sᴛɪʟʟ ɪɴ Tʜᴇ Dᴇᴠᴇʟᴏᴘᴍᴇɴᴛ Sᴛᴀɢᴇ -- Sᴏ Dᴏɴ'ᴛ Mɪsᴜsᴇ Tʜᴇ Mᴀᴅɴᴇss! "
+images:
+  - "/projects/ChatBot-2.0.mp4"
+team:
+  - name: "Shruthi K M"
+    role: "Data-Mind Fusion Specialist"
+    avatar: "/about/me.jpg"
+    linkedIn: "https://www.linkedin.com/in/i%EF%BD%93%EF%BD%93-a-c-m-%E5%8F%A3%EF%BD%93%E3%83%A2%EF%BD%93-d-12837831b/"
+
+link: "https://youtu.be/q9wDidbys-Q"
+github: "https://github.com/shruthikm/liebea"
+---
+
+
+# 𝐅𝐞𝐝𝐞𝐫𝐚𝐭𝐞𝐝 𝐋𝐞𝐚𝐫𝐧𝐢𝐧𝐠 𝐟𝐨𝐫 𝐏𝐫𝐢𝐯𝐚𝐜𝐲-𝐏𝐫𝐞𝐬𝐞𝐫𝐯𝐢𝐧𝐠 𝐅𝐚𝐜𝐢𝐚𝐥 𝐑𝐞𝐜𝐨𝐠𝐧𝐢𝐭𝐢𝐨𝐧 𝐢𝐧 𝐀𝐭𝐭𝐞𝐧𝐝𝐚𝐧𝐜𝐞 𝐒𝐲𝐬𝐭𝐞𝐦
+
+## Table of Contents
+
+1. [Introduction](#introduction)  
+2. [Motivation](#motivation)  
+3. [Background](#background)  
+   - [Facial Recognition](#facial-recognition)  
+   - [Privacy Concerns](#privacy-concerns)  
+   - [Federated Learning](#federated-learning)  
+4. [System Architecture](#system-architecture)  
+5. [Implementation Details](#implementation-details)  
+   - [1. Local Model Training](#1-local-model-training)  
+   - [2. Federated Aggregation](#2-federated-aggregation)  
+   - [3. Model Deployment](#3-model-deployment)  
+   - [4. Attendance Logging](#4-attendance-logging)  
+6. [Challenges and Solutions](#challenges-and-solutions)  
+7. [Evaluation Metrics](#evaluation-metrics)  
+8. [Use Cases](#use-cases)  
+9. [Conclusion](#conclusion)  
+10. [References](#references)  
+
+---
+
+## Introduction
+
+Facial recognition-based attendance systems are increasingly adopted in educational institutions and workplaces for their efficiency and automation. However, centralizing facial data raises **serious privacy concerns**.  
+
+**Federated Learning (FL)** allows multiple clients (e.g., user devices or edge servers) to collaboratively train a global machine learning model **without sharing raw data**, making it an ideal solution for privacy-preserving systems.  
+
+This project proposes a **federated learning-based facial recognition system** for attendance tracking, which ensures user privacy while maintaining high accuracy in recognition.
+
+---
+
+## Motivation
+
+- **Privacy Preservation:** Sensitive facial images remain on local devices.  
+- **Data Security:** Reduces risk of data breaches by avoiding centralized storage.  
+- **Compliance:** Aligns with regulations like GDPR, HIPAA, and other privacy laws.  
+- **Decentralized Learning:** Enables scalable training across multiple devices.  
+
+---
+
+## Background
+
+### Facial Recognition
+
+Facial recognition involves detecting, encoding, and matching faces in images or video frames. Typical steps include:
+
+1. **Face Detection:** Identify faces using methods like Haar Cascades, MTCNN, or YOLO.  
+2. **Feature Extraction:** Convert detected faces into numerical embeddings using CNNs (e.g., FaceNet, ArcFace).  
+3. **Matching and Classification:** Compare embeddings with registered user database to identify individuals.
+
+### Privacy Concerns
+
+- Centralized databases of facial images are vulnerable to **hacking, misuse, and leaks**.  
+- Sharing raw data across servers violates user privacy.  
+- Regulatory compliance demands minimal exposure of personal data.
+
+### Federated Learning
+
+Federated Learning is a decentralized ML approach where:
+
+- Each client trains a local model using its own data.  
+- Clients share **model updates (gradients or weights)** instead of raw data.  
+- A central server aggregates updates to form a global model.  
+- The global model is redistributed to clients iteratively.  
+
+**Advantages for Facial Recognition:**
+
+- No raw images leave the client device.  
+- Training is distributed, reducing server computational load.  
+- Enables continuous learning without compromising privacy.
+
+---
+
+## System Architecture
+  ```bash
+    Client Devices (Edge Nodes)
+    │
+    ├── Local Face Detection & Recognition Model
+    ├── Local Training with Private Data
+    │
+    └── Sends Model Updates → Central Server (Federated Aggregator)
+    │
+    ├── Aggregates Weights (FedAvg / FedProx)
+    └── Updates Global Model
+    │
+    └── Distributes Updated Model to Clients
+  ```
+
+  
+- **Client Devices:** Smartphones, tablets, or local terminals where facial data is captured.  
+- **Federated Aggregator:** Server aggregates model weights and coordinates training rounds.  
+- **Global Model:** Continuously improved facial recognition model shared with all clients.  
+- **Attendance Logging:** After identification, attendance is recorded in a secure database.
+
+---
+
+## Implementation Details
+
+### 1. Local Model Training
+
+- Each client device collects facial images of users locally.  
+- Preprocessing includes resizing, normalization, and augmentation.  
+- Local training uses a **CNN-based model** (e.g., MobileFaceNet for efficiency).  
+- Loss function: **Cross-Entropy** or **Triplet Loss** for embeddings.  
+
+### 2. Federated Aggregation
+
+- Model weights are transmitted (not raw data) to the central server.  
+- Aggregation strategies:
+  - **FedAvg:** Weighted averaging of local model updates.  
+  - **FedProx:** Handles non-IID data across clients.  
+- After aggregation, the updated global model is redistributed.
+
+### 3. Model Deployment
+
+- The global model is deployed on client devices for inference.  
+- Edge inference ensures **low latency** for real-time attendance recognition.  
+- Model updates are periodic or triggered by new data availability.
+
+### 4. Attendance Logging
+
+- Recognized faces trigger secure logging of attendance.  
+- Optional integration with **Google Sheets**, **SQL databases**, or **cloud storage**.  
+- All logs exclude sensitive image data, storing only anonymized identifiers and timestamps.
+
+
+---
+
+## Evaluation Metrics
+
+- **Accuracy:** Correct identification of faces.  
+- **Precision, Recall, F1-Score:** For each class/user.  
+- **Communication Efficiency:** Bytes transferred per training round.  
+- **Latency:** Time for recognition and attendance logging.  
+- **Privacy Metrics:** Ensuring no raw facial images leave client devices.
+
+---
+
+## Use Cases
+
+1. **Educational Institutions:** Secure and automated student attendance.  
+2. **Corporate Offices:** Privacy-preserving employee attendance monitoring.  
+3. **Event Management:** Tracking participants without centralizing sensitive data.  
+4. **Healthcare Facilities:** Staff identification without compromising patient data privacy.  
+
+---
+
+## Conclusion
+
+The **federated learning-based facial recognition system** provides a **privacy-preserving, decentralized solution** for attendance tracking. By keeping sensitive facial data local and only sharing model updates, the system ensures security, scalability, and compliance with privacy regulations while maintaining high recognition accuracy.  
+
+This framework demonstrates that **privacy and AI can coexist**, enabling modern attendance systems without sacrificing personal data protection.
+
+---
+
+## References
+
+1. Kairouz, P., McMahan, H. B., et al., *Advances and Open Problems in Federated Learning*, Foundations and Trends in Machine Learning, 2021.  
+2. Schroff, F., Kalenichenko, D., & Philbin, J., *FaceNet: A Unified Embedding for Face Recognition and Clustering*, CVPR, 2015.  
+3. Bonawitz, K., Eichner, H., et al., *Federated Learning: Challenges, Methods, and Future Directions*, IEEE, 2019.  
+4. McMahan, H. B., et al., *Communication-Efficient Learning of Deep Networks from Decentralized Data*, AISTATS, 2017.  
+5. Google AI Blog, *Federated Learning for On-Device AI*, 2017.  
+6. ArcFace: Deng, Jiankang, et al., *ArcFace: Additive Angular Margin Loss for Deep Face Recognition*, CVPR, 2019.  
+
