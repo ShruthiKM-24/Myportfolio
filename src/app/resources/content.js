@@ -53,7 +53,7 @@ const home = {
   headline: "Fulfillment Specialist ❃",
   subline: (
     <>
-      I'm Shruthi & I've worked on diverse projects across <InlineCode>Embedded Systems, Python, Web, and AI solutions</InlineCode>.
+      I'm Shruthi & I've worked on diverse projects across <InlineCode>Microsoft Excel, PowerPoint, Operations Management, Strategic Planning</InlineCode>
       <br /> This versatility reflects my belief that:
       <br /><br />
       <i>A jack of all trades is master of nothing, but often better than master of one.😉</i>
